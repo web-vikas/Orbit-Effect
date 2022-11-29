@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.menu {
+  height: 280px;
+  width: 280px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 700ms ease-in-out;
+}
+
+.menu .avatar img {
+  position: absolute;
+  height: 60px;
+  aspect-ratio: 1/1;
+  opacity: 1;
+  transition: opacity 400ms;
+  cursor: pointer;
+}
+
+.menu .avatar img:not(:first-child):hover {
+  opacity: 0;
+}
+
+li {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  left: 0;
+  list-style: none;
+  transform: rotate(calc(360deg/8 * var(--i)));
+  transform-origin: 140px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background: var(--bg);
+  animation: orbit 60s linear infinite;
+
+  transition: background .5s ease-in-out;
+
+}
+
+li a {
+  display: flex;
+  font-size: 2rem;
+  color: var(--clr);
+  transform: rotate(calc(360deg/-8 * var(--i)));
+  animation: rev 60s linear infinite;
+  transition: color .5s ease-in-out;
+}
+
+li:hover{
+  background-color: var(--clr);
+}
+li:hover a{
+  color: var(--bg);
+}
+
+@keyframes rev {
+  0% {
+    rotate: 1turn;
+  }
+}
+
+@keyframes orbit {
+  100% {
+    rotate: 1turn;
+  }
+}
+
+@keyframes throb {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.1;
+  }
+}

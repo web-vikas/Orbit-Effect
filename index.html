@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Orbitation Effect</title>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="avatar">
+            <img src="./images/girl.png">
+            <img src="./images/boy.png">
+        </div>
+            <li style="--i:0;--clr:#232b5a;--bg:#a7afdd;"><a href="#"><ion-icon name="airplane-outline"></ion-icon></a></li>
+            <li style="--i:1;--clr:#4c460a;--bg:#f2eaa0;"><a href="#"><ion-icon name="exit-outline"></ion-icon></a></li>
+            <li style="--i:2;--clr:#683f2b;--bg:#d0a48e;"><a href="#"><ion-icon name="beer-outline"></ion-icon></a></li>
+            <li style="--i:3;--clr:#5d2861;--bg:#d099d5;"><a href="#"><ion-icon name="person-add-outline"></ion-icon></a></li>
+            <li style="--i:4;--clr:#226034;--bg:#9ddca0;"><a href="#"><ion-icon name="calendar-number-outline"></ion-icon></a></li>
+            <li style="--i:5;--clr:#631919;--bg:#e69e9e;"><a href="#"><ion-icon name="finger-print-outline"></ion-icon></a></li>
+            <li style="--i:6;--clr:#224160;--bg:#9dbcdc;"><a href="#"><ion-icon name="stats-chart-outline"></ion-icon></a></li>
+            <li style="--i:7;--clr:#764504;--bg:#fbcb8c;"><a href="#"><ion-icon name="construct-outline"></ion-icon></a></li>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $('li').mouseenter(()=>{
+            $('li').css('animation-play-state','paused')        
+            $('li a').css('animation-play-state','paused')
+        }).mouseleave(()=>{
+            $('li').css('animation-play-state','running')
+            $('li a').css('animation-play-state','running')
+        })
+    </script>
+</body>
+
+</html>
